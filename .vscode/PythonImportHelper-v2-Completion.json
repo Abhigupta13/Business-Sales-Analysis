@@ -1,0 +1,351 @@
+[
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "Faker",
+        "importPath": "faker",
+        "description": "faker",
+        "isExtraImport": true,
+        "detail": "faker",
+        "documentation": {}
+    },
+    {
+        "label": "date_dimension",
+        "kind": 5,
+        "importPath": "Python Files.DateDimension",
+        "description": "Python Files.DateDimension",
+        "peekOfCode": "date_dimension = pd.DataFrame(date_range,columns = ['Date'])\n# add new columns to our dataframe DayofWeek Month Quarter Year Isweekend DateID\ndate_dimension['DayofWeek'] = date_dimension['Date'].dt.dayofweek\ndate_dimension['Month'] = date_dimension['Date'].dt.month\ndate_dimension['Quarter'] = date_dimension['Date'].dt.quarter\ndate_dimension['Year'] = date_dimension['Date'].dt.year\ndate_dimension['Isweekend'] = date_dimension['DayofWeek'].isin([5,6])\ndate_dimension['DateID'] = date_dimension['Date'].dt.strftime('%Y%m%d').astype(int)\n# reorder our data frame so that the dateid becomes the 1st column\ncols = ['DateID'] + [col for col in date_dimension.columns if col != 'DateID']",
+        "detail": "Python Files.DateDimension",
+        "documentation": {}
+    },
+    {
+        "label": "date_dimension['DayofWeek']",
+        "kind": 5,
+        "importPath": "Python Files.DateDimension",
+        "description": "Python Files.DateDimension",
+        "peekOfCode": "date_dimension['DayofWeek'] = date_dimension['Date'].dt.dayofweek\ndate_dimension['Month'] = date_dimension['Date'].dt.month\ndate_dimension['Quarter'] = date_dimension['Date'].dt.quarter\ndate_dimension['Year'] = date_dimension['Date'].dt.year\ndate_dimension['Isweekend'] = date_dimension['DayofWeek'].isin([5,6])\ndate_dimension['DateID'] = date_dimension['Date'].dt.strftime('%Y%m%d').astype(int)\n# reorder our data frame so that the dateid becomes the 1st column\ncols = ['DateID'] + [col for col in date_dimension.columns if col != 'DateID']\ndate_dimension=date_dimension[cols]\n# export it into a csv index column to be ignored ",
+        "detail": "Python Files.DateDimension",
+        "documentation": {}
+    },
+    {
+        "label": "date_dimension['Month']",
+        "kind": 5,
+        "importPath": "Python Files.DateDimension",
+        "description": "Python Files.DateDimension",
+        "peekOfCode": "date_dimension['Month'] = date_dimension['Date'].dt.month\ndate_dimension['Quarter'] = date_dimension['Date'].dt.quarter\ndate_dimension['Year'] = date_dimension['Date'].dt.year\ndate_dimension['Isweekend'] = date_dimension['DayofWeek'].isin([5,6])\ndate_dimension['DateID'] = date_dimension['Date'].dt.strftime('%Y%m%d').astype(int)\n# reorder our data frame so that the dateid becomes the 1st column\ncols = ['DateID'] + [col for col in date_dimension.columns if col != 'DateID']\ndate_dimension=date_dimension[cols]\n# export it into a csv index column to be ignored \ndate_dimension.to_csv('DimDate.csv',index=False)",
+        "detail": "Python Files.DateDimension",
+        "documentation": {}
+    },
+    {
+        "label": "date_dimension['Quarter']",
+        "kind": 5,
+        "importPath": "Python Files.DateDimension",
+        "description": "Python Files.DateDimension",
+        "peekOfCode": "date_dimension['Quarter'] = date_dimension['Date'].dt.quarter\ndate_dimension['Year'] = date_dimension['Date'].dt.year\ndate_dimension['Isweekend'] = date_dimension['DayofWeek'].isin([5,6])\ndate_dimension['DateID'] = date_dimension['Date'].dt.strftime('%Y%m%d').astype(int)\n# reorder our data frame so that the dateid becomes the 1st column\ncols = ['DateID'] + [col for col in date_dimension.columns if col != 'DateID']\ndate_dimension=date_dimension[cols]\n# export it into a csv index column to be ignored \ndate_dimension.to_csv('DimDate.csv',index=False)",
+        "detail": "Python Files.DateDimension",
+        "documentation": {}
+    },
+    {
+        "label": "date_dimension['Year']",
+        "kind": 5,
+        "importPath": "Python Files.DateDimension",
+        "description": "Python Files.DateDimension",
+        "peekOfCode": "date_dimension['Year'] = date_dimension['Date'].dt.year\ndate_dimension['Isweekend'] = date_dimension['DayofWeek'].isin([5,6])\ndate_dimension['DateID'] = date_dimension['Date'].dt.strftime('%Y%m%d').astype(int)\n# reorder our data frame so that the dateid becomes the 1st column\ncols = ['DateID'] + [col for col in date_dimension.columns if col != 'DateID']\ndate_dimension=date_dimension[cols]\n# export it into a csv index column to be ignored \ndate_dimension.to_csv('DimDate.csv',index=False)",
+        "detail": "Python Files.DateDimension",
+        "documentation": {}
+    },
+    {
+        "label": "date_dimension['Isweekend']",
+        "kind": 5,
+        "importPath": "Python Files.DateDimension",
+        "description": "Python Files.DateDimension",
+        "peekOfCode": "date_dimension['Isweekend'] = date_dimension['DayofWeek'].isin([5,6])\ndate_dimension['DateID'] = date_dimension['Date'].dt.strftime('%Y%m%d').astype(int)\n# reorder our data frame so that the dateid becomes the 1st column\ncols = ['DateID'] + [col for col in date_dimension.columns if col != 'DateID']\ndate_dimension=date_dimension[cols]\n# export it into a csv index column to be ignored \ndate_dimension.to_csv('DimDate.csv',index=False)",
+        "detail": "Python Files.DateDimension",
+        "documentation": {}
+    },
+    {
+        "label": "date_dimension['DateID']",
+        "kind": 5,
+        "importPath": "Python Files.DateDimension",
+        "description": "Python Files.DateDimension",
+        "peekOfCode": "date_dimension['DateID'] = date_dimension['Date'].dt.strftime('%Y%m%d').astype(int)\n# reorder our data frame so that the dateid becomes the 1st column\ncols = ['DateID'] + [col for col in date_dimension.columns if col != 'DateID']\ndate_dimension=date_dimension[cols]\n# export it into a csv index column to be ignored \ndate_dimension.to_csv('DimDate.csv',index=False)",
+        "detail": "Python Files.DateDimension",
+        "documentation": {}
+    },
+    {
+        "label": "cols",
+        "kind": 5,
+        "importPath": "Python Files.DateDimension",
+        "description": "Python Files.DateDimension",
+        "peekOfCode": "cols = ['DateID'] + [col for col in date_dimension.columns if col != 'DateID']\ndate_dimension=date_dimension[cols]\n# export it into a csv index column to be ignored \ndate_dimension.to_csv('DimDate.csv',index=False)",
+        "detail": "Python Files.DateDimension",
+        "documentation": {}
+    },
+    {
+        "label": "csv_file",
+        "kind": 5,
+        "importPath": "Python Files.DimCustomerData",
+        "description": "Python Files.DimCustomerData",
+        "peekOfCode": "csv_file = input ( \" enter the name of the csv file like data.csv : \")\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:\n    writer=csv.writer(file)\n#create the header \n    header = ['First Name','Last Name','Gender','DateOfBirth', 'Email', 'Phone Number', 'Address', 'City', 'State', 'Postal Code', 'Country','LoyaltyProgramID']\n#write the header to the csv file \n    writer.writerow(header)\n#loop and generate multiple rows \n    for _ in range(num_rows):",
+        "detail": "Python Files.DimCustomerData",
+        "documentation": {}
+    },
+    {
+        "label": "num_rows",
+        "kind": 5,
+        "importPath": "Python Files.DimProductData",
+        "description": "Python Files.DimProductData",
+        "peekOfCode": "num_rows = int(input( \" Enter the number of rows that you want to generate in the csv file : \"))\n#input the name of the csv file (e.g data.csv)\ncsv_file = input ( \" Enter the name of the csv file : \")\n# details of the excel file that has the lookup data , File Path and Name , Sheet Name and column names where the data is present \nexcel_file_path_name = \"C:/Users/anshu/Desktop/Personal/End to End Project/Lookup Data/LookupFile.xlsx\"\n#####\nexcel_sheet_name_product = \"Raw Product Names\"\nproduct_column_name  = \"Product Name\"\nexcel_sheet_name_category = \"Product Categories\"\ncategory_column_name = \"Category Name\"",
+        "detail": "Python Files.DimProductData",
+        "documentation": {}
+    },
+    {
+        "label": "csv_file",
+        "kind": 5,
+        "importPath": "Python Files.DimProductData",
+        "description": "Python Files.DimProductData",
+        "peekOfCode": "csv_file = input ( \" Enter the name of the csv file : \")\n# details of the excel file that has the lookup data , File Path and Name , Sheet Name and column names where the data is present \nexcel_file_path_name = \"C:/Users/anshu/Desktop/Personal/End to End Project/Lookup Data/LookupFile.xlsx\"\n#####\nexcel_sheet_name_product = \"Raw Product Names\"\nproduct_column_name  = \"Product Name\"\nexcel_sheet_name_category = \"Product Categories\"\ncategory_column_name = \"Category Name\"\n#fetch this sheet data in a dataframe \ndf = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_product)",
+        "detail": "Python Files.DimProductData",
+        "documentation": {}
+    },
+    {
+        "label": "excel_file_path_name",
+        "kind": 5,
+        "importPath": "Python Files.DimProductData",
+        "description": "Python Files.DimProductData",
+        "peekOfCode": "excel_file_path_name = \"C:/Users/anshu/Desktop/Personal/End to End Project/Lookup Data/LookupFile.xlsx\"\n#####\nexcel_sheet_name_product = \"Raw Product Names\"\nproduct_column_name  = \"Product Name\"\nexcel_sheet_name_category = \"Product Categories\"\ncategory_column_name = \"Category Name\"\n#fetch this sheet data in a dataframe \ndf = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_product)\ndf_cat = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_category)\n#open the csv file ",
+        "detail": "Python Files.DimProductData",
+        "documentation": {}
+    },
+    {
+        "label": "excel_sheet_name_product",
+        "kind": 5,
+        "importPath": "Python Files.DimProductData",
+        "description": "Python Files.DimProductData",
+        "peekOfCode": "excel_sheet_name_product = \"Raw Product Names\"\nproduct_column_name  = \"Product Name\"\nexcel_sheet_name_category = \"Product Categories\"\ncategory_column_name = \"Category Name\"\n#fetch this sheet data in a dataframe \ndf = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_product)\ndf_cat = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_category)\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:\n    writer=csv.writer(file)",
+        "detail": "Python Files.DimProductData",
+        "documentation": {}
+    },
+    {
+        "label": "excel_sheet_name_category",
+        "kind": 5,
+        "importPath": "Python Files.DimProductData",
+        "description": "Python Files.DimProductData",
+        "peekOfCode": "excel_sheet_name_category = \"Product Categories\"\ncategory_column_name = \"Category Name\"\n#fetch this sheet data in a dataframe \ndf = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_product)\ndf_cat = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_category)\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:\n    writer=csv.writer(file)\n#create the header \n#####",
+        "detail": "Python Files.DimProductData",
+        "documentation": {}
+    },
+    {
+        "label": "category_column_name",
+        "kind": 5,
+        "importPath": "Python Files.DimProductData",
+        "description": "Python Files.DimProductData",
+        "peekOfCode": "category_column_name = \"Category Name\"\n#fetch this sheet data in a dataframe \ndf = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_product)\ndf_cat = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_category)\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:\n    writer=csv.writer(file)\n#create the header \n#####\n    header=['ProductName','Category','Brand','UnitPrice']",
+        "detail": "Python Files.DimProductData",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "Python Files.DimProductData",
+        "description": "Python Files.DimProductData",
+        "peekOfCode": "df = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_product)\ndf_cat = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_category)\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:\n    writer=csv.writer(file)\n#create the header \n#####\n    header=['ProductName','Category','Brand','UnitPrice']\n#write the header to the csv file \n    writer.writerow(header)",
+        "detail": "Python Files.DimProductData",
+        "documentation": {}
+    },
+    {
+        "label": "df_cat",
+        "kind": 5,
+        "importPath": "Python Files.DimProductData",
+        "description": "Python Files.DimProductData",
+        "peekOfCode": "df_cat = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name_category)\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:\n    writer=csv.writer(file)\n#create the header \n#####\n    header=['ProductName','Category','Brand','UnitPrice']\n#write the header to the csv file \n    writer.writerow(header)\n#loop and generate multiple rows ",
+        "detail": "Python Files.DimProductData",
+        "documentation": {}
+    },
+    {
+        "label": "num_rows",
+        "kind": 5,
+        "importPath": "Python Files.DimStoreData",
+        "description": "Python Files.DimStoreData",
+        "peekOfCode": "num_rows = int(input( \" Enter the number of rows that you want to generate in the csv file : \"))\n#input the name of the csv file (e.g data.csv)\ncsv_file = input ( \" Enter the name of the csv file : \")\n# details of the excel file that has the lookup data , File Path and Name , Sheet Name and column names where the data is present \nexcel_file_path_name = \"C:/Users/anshu/Desktop/Personal/End to End Project/Lookup Data/LookupFile.xlsx\"\nexcel_sheet_name = \"Store Name Data\"\nadjective_column_name  = \"Adjectives\"\nnoun_column_name = \"Nouns\"\n#fetch this sheet data in a dataframe \ndf = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name)",
+        "detail": "Python Files.DimStoreData",
+        "documentation": {}
+    },
+    {
+        "label": "csv_file",
+        "kind": 5,
+        "importPath": "Python Files.DimStoreData",
+        "description": "Python Files.DimStoreData",
+        "peekOfCode": "csv_file = input ( \" Enter the name of the csv file : \")\n# details of the excel file that has the lookup data , File Path and Name , Sheet Name and column names where the data is present \nexcel_file_path_name = \"C:/Users/anshu/Desktop/Personal/End to End Project/Lookup Data/LookupFile.xlsx\"\nexcel_sheet_name = \"Store Name Data\"\nadjective_column_name  = \"Adjectives\"\nnoun_column_name = \"Nouns\"\n#fetch this sheet data in a dataframe \ndf = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name)\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:",
+        "detail": "Python Files.DimStoreData",
+        "documentation": {}
+    },
+    {
+        "label": "excel_file_path_name",
+        "kind": 5,
+        "importPath": "Python Files.DimStoreData",
+        "description": "Python Files.DimStoreData",
+        "peekOfCode": "excel_file_path_name = \"C:/Users/anshu/Desktop/Personal/End to End Project/Lookup Data/LookupFile.xlsx\"\nexcel_sheet_name = \"Store Name Data\"\nadjective_column_name  = \"Adjectives\"\nnoun_column_name = \"Nouns\"\n#fetch this sheet data in a dataframe \ndf = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name)\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:\n    writer=csv.writer(file)\n#create the header ",
+        "detail": "Python Files.DimStoreData",
+        "documentation": {}
+    },
+    {
+        "label": "excel_sheet_name",
+        "kind": 5,
+        "importPath": "Python Files.DimStoreData",
+        "description": "Python Files.DimStoreData",
+        "peekOfCode": "excel_sheet_name = \"Store Name Data\"\nadjective_column_name  = \"Adjectives\"\nnoun_column_name = \"Nouns\"\n#fetch this sheet data in a dataframe \ndf = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name)\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:\n    writer=csv.writer(file)\n#create the header \n    header=['StoreName','StoreType','StoreOpeningDate','Address','City','State','Country','Region','Manager Name']",
+        "detail": "Python Files.DimStoreData",
+        "documentation": {}
+    },
+    {
+        "label": "noun_column_name",
+        "kind": 5,
+        "importPath": "Python Files.DimStoreData",
+        "description": "Python Files.DimStoreData",
+        "peekOfCode": "noun_column_name = \"Nouns\"\n#fetch this sheet data in a dataframe \ndf = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name)\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:\n    writer=csv.writer(file)\n#create the header \n    header=['StoreName','StoreType','StoreOpeningDate','Address','City','State','Country','Region','Manager Name']\n#write the header to the csv file ",
+        "detail": "Python Files.DimStoreData",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "Python Files.DimStoreData",
+        "description": "Python Files.DimStoreData",
+        "peekOfCode": "df = pd.read_excel(excel_file_path_name,sheet_name=excel_sheet_name)\n#open the csv file \nwith open(csv_file,mode='w',newline='') as file:\n    writer=csv.writer(file)\n#create the header \n    header=['StoreName','StoreType','StoreOpeningDate','Address','City','State','Country','Region','Manager Name']\n#write the header to the csv file \n    writer.writerow(header)\n#loop and generate multiple rows \n    for _ in range(num_rows):",
+        "detail": "Python Files.DimStoreData",
+        "documentation": {}
+    },
+    {
+        "label": "num_rows",
+        "kind": 5,
+        "importPath": "Python Files.Historical_Sales_Data",
+        "description": "Python Files.Historical_Sales_Data",
+        "peekOfCode": "num_rows = int(input(\" Enter the number of rows for orders : \"))\n#generate the series of dates between 2014 and 2024 \nrandom_dates = np.random.choice(np.arange(np.datetime64('2014-01-01'),np.datetime64('2024-07-28')),size = num_rows)\nformatted_rows = pd.to_datetime(random_dates).strftime('%Y%m%d')\ndata = {\n    'DateID': formatted_rows,\n    'ProductID': np.random.randint(1,1001,size=num_rows),\n    'StoreID': np.random.randint(1,101,size=num_rows),\n    'CustomerID': np.random.randint(1,1001,size=num_rows),\n    'QuantityOrderded': np.random.randint(1,21,size=num_rows),   ",
+        "detail": "Python Files.Historical_Sales_Data",
+        "documentation": {}
+    },
+    {
+        "label": "random_dates",
+        "kind": 5,
+        "importPath": "Python Files.Historical_Sales_Data",
+        "description": "Python Files.Historical_Sales_Data",
+        "peekOfCode": "random_dates = np.random.choice(np.arange(np.datetime64('2014-01-01'),np.datetime64('2024-07-28')),size = num_rows)\nformatted_rows = pd.to_datetime(random_dates).strftime('%Y%m%d')\ndata = {\n    'DateID': formatted_rows,\n    'ProductID': np.random.randint(1,1001,size=num_rows),\n    'StoreID': np.random.randint(1,101,size=num_rows),\n    'CustomerID': np.random.randint(1,1001,size=num_rows),\n    'QuantityOrderded': np.random.randint(1,21,size=num_rows),   \n    'OrderAmount': np.random.randint(100,1001,size=num_rows)\n    }",
+        "detail": "Python Files.Historical_Sales_Data",
+        "documentation": {}
+    },
+    {
+        "label": "formatted_rows",
+        "kind": 5,
+        "importPath": "Python Files.Historical_Sales_Data",
+        "description": "Python Files.Historical_Sales_Data",
+        "peekOfCode": "formatted_rows = pd.to_datetime(random_dates).strftime('%Y%m%d')\ndata = {\n    'DateID': formatted_rows,\n    'ProductID': np.random.randint(1,1001,size=num_rows),\n    'StoreID': np.random.randint(1,101,size=num_rows),\n    'CustomerID': np.random.randint(1,1001,size=num_rows),\n    'QuantityOrderded': np.random.randint(1,21,size=num_rows),   \n    'OrderAmount': np.random.randint(100,1001,size=num_rows)\n    }\ndf = pd.DataFrame(data)",
+        "detail": "Python Files.Historical_Sales_Data",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "Python Files.Historical_Sales_Data",
+        "description": "Python Files.Historical_Sales_Data",
+        "peekOfCode": "data = {\n    'DateID': formatted_rows,\n    'ProductID': np.random.randint(1,1001,size=num_rows),\n    'StoreID': np.random.randint(1,101,size=num_rows),\n    'CustomerID': np.random.randint(1,1001,size=num_rows),\n    'QuantityOrderded': np.random.randint(1,21,size=num_rows),   \n    'OrderAmount': np.random.randint(100,1001,size=num_rows)\n    }\ndf = pd.DataFrame(data)\ndiscount_perc = np.random.uniform(0.02,0.15,size=num_rows)",
+        "detail": "Python Files.Historical_Sales_Data",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "Python Files.Historical_Sales_Data",
+        "description": "Python Files.Historical_Sales_Data",
+        "peekOfCode": "df = pd.DataFrame(data)\ndiscount_perc = np.random.uniform(0.02,0.15,size=num_rows)\nshipping_cost = np.random.uniform(0.05,0.15,size=num_rows)\n# calculate columns \ndf['DiscountAmount'] = df['OrderAmount'] * discount_perc\ndf['Shipping Cost'] = df['OrderAmount'] * shipping_cost\ndf['TotalAmount'] = df['OrderAmount'] -(df['DiscountAmount']+df['Shipping Cost'])\nprint(df)\ndf.to_csv('factorders.csv',index=False)\n\"\"\" These are the column we need to generate ",
+        "detail": "Python Files.Historical_Sales_Data",
+        "documentation": {}
+    },
+    {
+        "label": "discount_perc",
+        "kind": 5,
+        "importPath": "Python Files.Historical_Sales_Data",
+        "description": "Python Files.Historical_Sales_Data",
+        "peekOfCode": "discount_perc = np.random.uniform(0.02,0.15,size=num_rows)\nshipping_cost = np.random.uniform(0.05,0.15,size=num_rows)\n# calculate columns \ndf['DiscountAmount'] = df['OrderAmount'] * discount_perc\ndf['Shipping Cost'] = df['OrderAmount'] * shipping_cost\ndf['TotalAmount'] = df['OrderAmount'] -(df['DiscountAmount']+df['Shipping Cost'])\nprint(df)\ndf.to_csv('factorders.csv',index=False)\n\"\"\" These are the column we need to generate \n'DateID' -- random date in a date range in a specified format ",
+        "detail": "Python Files.Historical_Sales_Data",
+        "documentation": {}
+    },
+    {
+        "label": "shipping_cost",
+        "kind": 5,
+        "importPath": "Python Files.Historical_Sales_Data",
+        "description": "Python Files.Historical_Sales_Data",
+        "peekOfCode": "shipping_cost = np.random.uniform(0.05,0.15,size=num_rows)\n# calculate columns \ndf['DiscountAmount'] = df['OrderAmount'] * discount_perc\ndf['Shipping Cost'] = df['OrderAmount'] * shipping_cost\ndf['TotalAmount'] = df['OrderAmount'] -(df['DiscountAmount']+df['Shipping Cost'])\nprint(df)\ndf.to_csv('factorders.csv',index=False)\n\"\"\" These are the column we need to generate \n'DateID' -- random date in a date range in a specified format \n'ProductID' -- random ",
+        "detail": "Python Files.Historical_Sales_Data",
+        "documentation": {}
+    },
+    {
+        "label": "df['DiscountAmount']",
+        "kind": 5,
+        "importPath": "Python Files.Historical_Sales_Data",
+        "description": "Python Files.Historical_Sales_Data",
+        "peekOfCode": "df['DiscountAmount'] = df['OrderAmount'] * discount_perc\ndf['Shipping Cost'] = df['OrderAmount'] * shipping_cost\ndf['TotalAmount'] = df['OrderAmount'] -(df['DiscountAmount']+df['Shipping Cost'])\nprint(df)\ndf.to_csv('factorders.csv',index=False)\n\"\"\" These are the column we need to generate \n'DateID' -- random date in a date range in a specified format \n'ProductID' -- random \n'StoreID' -- random \n'CustomerID' -- random ",
+        "detail": "Python Files.Historical_Sales_Data",
+        "documentation": {}
+    },
+    {
+        "label": "df['TotalAmount']",
+        "kind": 5,
+        "importPath": "Python Files.Historical_Sales_Data",
+        "description": "Python Files.Historical_Sales_Data",
+        "peekOfCode": "df['TotalAmount'] = df['OrderAmount'] -(df['DiscountAmount']+df['Shipping Cost'])\nprint(df)\ndf.to_csv('factorders.csv',index=False)\n\"\"\" These are the column we need to generate \n'DateID' -- random date in a date range in a specified format \n'ProductID' -- random \n'StoreID' -- random \n'CustomerID' -- random \n'QuantityOrderded' -- random \n'OrderAmount' -- random ",
+        "detail": "Python Files.Historical_Sales_Data",
+        "documentation": {}
+    }
+]
